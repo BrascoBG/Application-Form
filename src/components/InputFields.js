@@ -27,6 +27,16 @@ function Inputs(props) {
       skills,
       description
     );
+    setName("");
+    setAge("");
+    setPhone("");
+    setEmail("");
+    setDate("");
+    setCommunication("");
+    setEnglish("");
+    setSkills("");
+    setDescription("");
+    setTerms(false);
   };
 
   return (
@@ -42,6 +52,7 @@ function Inputs(props) {
               type="text"
               placeholder="Enter your full name"
               onChange={(e) => setName(e.target.value)}
+              required
             />
           </div>
           <div className="form-group">
@@ -75,6 +86,7 @@ function Inputs(props) {
               type="email"
               placeholder="Enter your Email"
               onChange={(e) => setEmail(e.target.value)}
+              required
             />
             <small id="emailHelp" className="form-text text-muted">
               We'll never share your email with anyone else.
@@ -110,6 +122,7 @@ function Inputs(props) {
               name="communication"
               value="By Phone"
               onChange={(e) => setCommunication(e.target.value)}
+              required
             />
           </fieldset>
           <div className="form-group">
@@ -171,11 +184,10 @@ function Inputs(props) {
         {terms ? (
           <button className="btn-submit">Submit</button>
         ) : (
-          <button className="btn-submit" disabled>
+          <button className="btn-disabled" disabled>
             Check the Terms
           </button>
         )}
-        <button className="btn-clear">Clear the form</button>
       </form>
     </div>
   );

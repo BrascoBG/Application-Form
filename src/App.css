@@ -55,6 +55,8 @@ h3 {
 }
 hr {
   background-color: #673ab72b;
+  width: 90%;
+  margin: 0 auto;
 }
 .txtarea {
   width: 430px;
@@ -90,6 +92,13 @@ label {
   font-size: 22px;
   border-radius: 5px;
   margin-right: 10px;
+}
+.btn-disabled {
+  padding: 10px 20px;
+  border: 0;
+  font-size: 22px;
+  margin-right: 10px;
+  border-radius: 5px;
 }
 .btn-submit:hover {
   background-color: #268a2a;

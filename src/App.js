@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import { v4 as uuidv4 } from "uuid";
 import { BrowserRouter as Router, Route } from "react-router-dom";
@@ -36,6 +36,15 @@ function App() {
     };
     setData([...data, items]);
   };
+
+  useEffect(() => {
+    const localData = localStorage.getItem("Data");
+    setData(JSON.parse(localData));
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("Data", JSON.stringify(data));
+  }, [data]);
 
   const delPerson = (id) => {
     setData(data.filter((item) => item.id !== id));

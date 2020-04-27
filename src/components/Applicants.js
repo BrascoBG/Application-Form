@@ -2,7 +2,7 @@ import React from "react";
 
 function List(props) {
   return (
-    <div style={{ height: "100vh" }}>
+    <div style={{ height: "100vh" }} className="table-responsive">
       <h3>All the applicants so far</h3>
       <table className="table table-sm table-hover table-bordered">
         <tbody>
