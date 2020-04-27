@@ -2,13 +2,14 @@ import React from "react";
 
 function Header() {
   return (
-    <div className="header">
+    <div>
       <h1>Application form</h1>
       <nav>
-        <a>Home</a>
-        <a>Applicants</a>
-        <a>About</a>
+        <a href="#">Home</a>
+        <a href="#">Applicants</a>
+        <a href="#">About</a>
       </nav>
+      <hr />
     </div>
   );
 }

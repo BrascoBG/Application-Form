@@ -5,13 +5,13 @@
 }
 .App {
   text-align: center;
-}
-.header {
-  background-color: lightslategrey;
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
 }
 h1 {
+  color: #f1c1eb;
   font-family: serif;
   font-size: 50px !important;
+  text-shadow: 2px 2px 2px gray;
 }
 .flex {
   display: flex;
@@ -21,20 +21,33 @@ h1 {
 .form-group {
   width: 265px;
 }
+.form-control {
+  background-color: #ffffff80 !important;
+}
 #field,
 #field-terms {
   width: 430px;
-  border: 1px solid lightgrey;
+  border: 1px solid #9c27b05e;
   border-radius: 5px;
 }
 #field > legend,
 #field-terms > legend {
-  font-size: 18px;
+  font-family: serif;
+  font-size: 16px;
   width: 70%;
+  font-weight: bold;
+  color: #673ab7;
 }
 #field > label,
 #field-terms > label {
   margin-right: 7px;
+  color: #9c27b0;
+  background: #a888d77a;
+  padding: 3px;
+  border-radius: 3px;
+}
+hr {
+  background-color: #673ab72b;
 }
 .txtarea {
   width: 430px;
@@ -44,11 +57,51 @@ h1 {
 }
 nav > a {
   margin: 0px 20px;
+  background: #9c27b05e;
+  padding: 6px;
+  border-radius: 3px;
+  text-decoration: none !important;
+  color: #a6c1ee;
+}
+nav > a:hover {
+  background: blueviolet;
+  color: #fff;
 }
 nav {
-  padding: 15px;
+  padding: 5px;
 }
 label {
   font-family: serif;
   font-weight: bold;
+  color: #673ab7;
+}
+.btn-submit {
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #4ccc51;
+  border: 0;
+  font-size: 22px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.btn-submit:hover {
+  background-color: #268a2a;
+  color: #f1c1eb;
+}
+.btn-clear {
+  padding: 10px 20px;
+  color: #a6c1ee;
+  background-color: #a70404ad;
+  border: 0;
+  font-size: 22px;
+  border-radius: 5px;
+}
+.btn-clear:hover {
+  background-color: #c10303;
+}
+.footer {
+  font-family: cursive;
+  text-align: right;
+  padding: 20px;
+  margin-bottom: 0px;
 }

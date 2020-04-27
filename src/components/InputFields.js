@@ -103,8 +103,8 @@ function Inputs() {
           </fieldset>
         </div>
         <br />
-        <button className="btn btn-primary btn-lg">Submit</button>
-        <button className="btn btn-danger btn-lg">Clear the form</button>
+        <button className="btn-submit">Submit</button>
+        <button className="btn-clear">Clear the form</button>
       </form>
     </div>
   );
