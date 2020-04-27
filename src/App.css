@@ -13,6 +13,13 @@ h1 {
   font-size: 50px !important;
   text-shadow: 2px 2px 2px gray;
 }
+h3 {
+  background-image: linear-gradient(45deg, transparent, #3f51b54f, transparent);
+  color: #f1c1eb;
+  font-family: serif;
+  font-size: 30px !important;
+  text-shadow: 2px 2px 2px gray;
+}
 .flex {
   display: flex;
   justify-content: space-around;
@@ -102,6 +109,6 @@ label {
 .footer {
   font-family: cursive;
   text-align: right;
-  padding: 20px;
+  padding: 5px 20px 20px 20px;
   margin-bottom: 0px;
 }

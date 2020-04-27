@@ -1,13 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
     <div>
       <h1>Application form</h1>
       <nav>
-        <a href="#">Home</a>
-        <a href="#">Applicants</a>
-        <a href="#">About</a>
+        <Link to="/">Home</Link>
+        <Link to="/list">Applicants</Link>
+        <Link to="/about">About</Link>
       </nav>
       <hr />
     </div>

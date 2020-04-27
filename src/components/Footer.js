@@ -3,9 +3,10 @@ import React from "react";
 function Footer() {
   return (
     <>
+      <hr />
       <p className="footer">
-        <hr />
-        &copy; <a href="#">Code Here</a>
+        &copy;{" "}
+        <a href="https://github.com/BrascoBG/Application-Form">Code Here</a>
       </p>
     </>
   );

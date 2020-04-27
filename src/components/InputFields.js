@@ -1,46 +1,80 @@
-import React from "react";
+import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../App.css";
 
-function Inputs() {
+function Inputs(props) {
+  const [name, setName] = useState("");
+  const [age, setAge] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [date, setDate] = useState("");
+  const [communication, setCommunication] = useState("");
+  const [english, setEnglish] = useState("");
+  const [skills, setSkills] = useState("");
+  const [description, setDescription] = useState("");
+  const [terms, setTerms] = useState(false);
+
+  const saveData = (e) => {
+    e.preventDefault();
+    props.eventHandler(
+      name,
+      age,
+      phone,
+      email,
+      date,
+      communication,
+      english,
+      skills,
+      description
+    );
+  };
+
   return (
     <div>
-      <form>
+      <form onSubmit={saveData}>
         <div className="flex">
           <div className="form-group">
             <label htmlFor="name">Full Name</label>
             <input
+              value={name}
               className="form-control"
               id="name"
               type="text"
               placeholder="Enter your full name"
+              onChange={(e) => setName(e.target.value)}
             />
           </div>
           <div className="form-group">
             <label htmlFor="age">Age</label>
             <input
+              value={age}
               className="form-control"
               id="age"
               type="number"
               placeholder="Enter your age"
+              onChange={(e) => setAge(e.target.value)}
             />
           </div>
           <div className="form-group">
             <label htmlFor="phone">Phone</label>
             <input
+              value={phone}
               className="form-control"
               id="phone"
               type="text"
               placeholder="Enter your phone number"
+              onChange={(e) => setPhone(e.target.value)}
             />
           </div>
           <div className="form-group">
             <label htmlFor="mail">Email</label>
             <input
+              value={email}
               className="form-control"
               id="mail"
               type="email"
               placeholder="Enter your Email"
+              onChange={(e) => setEmail(e.target.value)}
             />
             <small id="emailHelp" className="form-text text-muted">
               We'll never share your email with anyone else.
@@ -51,18 +85,40 @@ function Inputs() {
         <div className="flex">
           <div className="form-group">
             <label htmlFor="date">Available to start:</label>
-            <input className="form-control" id="date" type="date" />
+            <input
+              className="form-control"
+              id="date"
+              type="date"
+              value={date}
+              onChange={(e) => setDate(e.target.value)}
+            />
           </div>
           <fieldset id="field">
             <legend>Preffered way for communication</legend>
             <label htmlFor="email">Email</label>
-            <input id="email" type="radio" name="communication" />
+            <input
+              id="email"
+              type="radio"
+              name="communication"
+              value="By Email"
+              onChange={(e) => setCommunication(e.target.value)}
+            />
             <label htmlFor="tel">Phone</label>
-            <input id="tel" type="radio" name="communication" />
+            <input
+              id="tel"
+              type="radio"
+              name="communication"
+              value="By Phone"
+              onChange={(e) => setCommunication(e.target.value)}
+            />
           </fieldset>
           <div className="form-group">
             <label htmlFor="english">English level</label>
-            <select className="form-control" id="english">
+            <select
+              className="form-control"
+              id="english"
+              onChange={(e) => setEnglish(e.target.value)}
+            >
               <option value="">---</option>
               <option value="A1">A1 (Beginner)</option>
               <option value="A2">A2 (Elementary English)</option>
@@ -78,19 +134,23 @@ function Inputs() {
           <div className="form-group txtarea">
             <label htmlFor="skills">Technical skills and courses</label>
             <textarea
+              value={skills}
               className="form-control"
               id="skills"
               rows={8}
               placeholder="Write about your skills..."
+              onChange={(e) => setSkills(e.target.value)}
             ></textarea>
           </div>
           <div className="form-group txtarea">
             <label htmlFor="presentation">Short Personal Presentation</label>
             <textarea
+              value={description}
               className="form-control"
               id="presentation"
               rows={8}
               placeholder="Describe yourself..."
+              onChange={(e) => setDescription(e.target.value)}
             ></textarea>
           </div>
         </div>
@@ -99,11 +159,22 @@ function Inputs() {
           <fieldset id="field-terms">
             <legend>Terms and Conditions</legend>
             <label htmlFor="terms">Agree with the terms?</label>
-            <input id="terms" type="checkbox" />
+            <input
+              id="terms"
+              type="checkbox"
+              value={terms}
+              onChange={(e) => setTerms(e.target.checked)}
+            />
           </fieldset>
         </div>
         <br />
-        <button className="btn-submit">Submit</button>
+        {terms ? (
+          <button className="btn-submit">Submit</button>
+        ) : (
+          <button className="btn-submit" disabled>
+            Check the Terms
+          </button>
+        )}
         <button className="btn-clear">Clear the form</button>
       </form>
     </div>
