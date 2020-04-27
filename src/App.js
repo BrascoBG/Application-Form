@@ -10,7 +10,6 @@ import About from "./components/About";
 
 function App() {
   const [data, setData] = useState([]);
-
   const eventHandler = (
     name,
     age,
