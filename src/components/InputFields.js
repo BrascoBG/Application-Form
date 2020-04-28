@@ -13,6 +13,7 @@ function Inputs(props) {
   const [skills, setSkills] = useState("");
   const [description, setDescription] = useState("");
   const [terms, setTerms] = useState(false);
+  const [alert, setAlert] = useState("none");
 
   const saveData = (e) => {
     e.preventDefault();
@@ -37,6 +38,11 @@ function Inputs(props) {
     setSkills("");
     setDescription("");
     setTerms(false);
+    setAlert("block");
+  };
+
+  const style = {
+    display: alert,
   };
 
   return (
@@ -122,7 +128,6 @@ function Inputs(props) {
               name="communication"
               value="By Phone"
               onChange={(e) => setCommunication(e.target.value)}
-              required
             />
           </fieldset>
           <div className="form-group">
@@ -189,6 +194,9 @@ function Inputs(props) {
           </button>
         )}
       </form>
+      <div className="alert alert-success" role="alert" style={style}>
+        You successfully added a new aplicant! Go check it out from Navigation!
+      </div>
     </div>
   );
 }

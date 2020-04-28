@@ -6,7 +6,13 @@ function Footer() {
       <hr />
       <p className="footer">
         &copy;{" "}
-        <a href="https://github.com/BrascoBG/Application-Form">Code Here</a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://github.com/BrascoBG/Application-Form"
+        >
+          Code Here
+        </a>
       </p>
     </>
   );
