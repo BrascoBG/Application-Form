@@ -4,6 +4,18 @@ This is a SPA built with ReactJS, React Router, Functional Components with Hooks
 
 ## It's adding applicants into a table.
 
+### `The Form`
+
+![Form](https://github.com/BrascoBG/Application-Form/blob/master/src/assets/form.jpg?raw=true)
+
+### `The Table`
+
+![Table](https://github.com/BrascoBG/Application-Form/blob/master/src/assets/table.jpg?raw=true)
+
+### `About`
+
+![About](https://github.com/BrascoBG/Application-Form/blob/master/src/assets/about.jpg?raw=true)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
