@@ -1,4 +1,8 @@
-# In progress...
+# Application Form
+
+This is a SPA built with ReactJS, React Router, Functional Components with Hooks, Bootstrap, Git, GitHub, CSS3, Flexbox, LocalStorage, etc.
+
+## It's adding applicants into a table.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

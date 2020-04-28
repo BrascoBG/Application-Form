@@ -9,7 +9,7 @@ function About() {
         <h3 className="display-4">ReactJS SPA</h3>
         <p className="lead">
           This is a SPA built with ReactJS, React Router, Functional Components
-          with Hooks, Bootstrap, Git, GitHub, CSS3, Flexbox, etc.
+          with Hooks, Bootstrap, Git, GitHub, CSS3, Flexbox, LocalStorage, etc.
         </p>
         <hr className="my-4" />
         <p>It's adding applicants into a table.</p>
