@@ -2,7 +2,7 @@
   "name": "application-form",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://BrascoBG.github.io/Application-Form-Live",
+  "homepage": "https://BrascoBG.github.io/about",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",

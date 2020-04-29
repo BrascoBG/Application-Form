@@ -38,7 +38,9 @@ function App() {
 
   useEffect(() => {
     const localData = localStorage.getItem("Data");
-    setData(JSON.parse(localData));
+    if (localData !== null) {
+      setData(JSON.parse(localData));
+    }
   }, []);
 
   useEffect(() => {
