@@ -55,16 +55,18 @@ function App() {
     <Router>
       <div className="App">
         <Header />
-        <Route
-          exact
-          path="/"
-          render={() => <Inputs eventHandler={eventHandler} />}
-        />
-        <Route
-          path="/list"
-          render={() => <List data={data} delPerson={delPerson} />}
-        />
-        <Route path="/about" component={About} />
+        <div style={{ height: "100vh" }}>
+          <Route
+            exact
+            path="/"
+            render={() => <Inputs eventHandler={eventHandler} />}
+          />
+          <Route
+            path="/list"
+            render={() => <List data={data} delPerson={delPerson} />}
+          />
+          <Route path="/about" component={About} />
+        </div>
         <Footer />
       </div>
     </Router>
