@@ -55,7 +55,7 @@ function App() {
     <Router>
       <div className="App">
         <Header />
-        <div style={{ height: "100vh" }}>
+        <div style={{ minHeight: "100vh" }}>
           <Route
             exact
             path="/"
