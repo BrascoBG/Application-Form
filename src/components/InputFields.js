@@ -39,6 +39,9 @@ function Inputs(props) {
     setDescription("");
     setTerms(false);
     setAlert("block");
+    setTimeout(() => {
+      setAlert("none");
+    }, 5000);
   };
 
   const style = {

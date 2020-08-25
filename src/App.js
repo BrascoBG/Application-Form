@@ -45,6 +45,9 @@ function App() {
 
   useEffect(() => {
     localStorage.setItem("Data", JSON.stringify(data));
+    if (data.length === 0) {
+      localStorage.removeItem("Data");
+    }
   }, [data]);
 
   const delPerson = (id) => {
@@ -58,14 +61,14 @@ function App() {
         <div style={{ minHeight: "100vh" }}>
           <Route
             exact
-            path="/"
+            path="/Application-Form-Live/"
             render={() => <Inputs eventHandler={eventHandler} />}
           />
           <Route
-            path="/list"
+            path="/Application-Form-Live/list/"
             render={() => <List data={data} delPerson={delPerson} />}
           />
-          <Route path="/about" component={About} />
+          <Route path="/Application-Form-Live/about/" component={About} />
         </div>
         <Footer />
       </div>
