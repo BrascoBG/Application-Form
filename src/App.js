@@ -61,14 +61,14 @@ function App() {
         <div style={{ minHeight: "100vh" }}>
           <Route
             exact
-            path="/Application-Form-Live/"
+            path="/Application-Form-Live"
             render={() => <Inputs eventHandler={eventHandler} />}
           />
           <Route
-            path="/Application-Form-Live/list/"
+            path="/Application-Form-Live/list"
             render={() => <List data={data} delPerson={delPerson} />}
           />
-          <Route path="/Application-Form-Live/about/" component={About} />
+          <Route path="/Application-Form-Live/about" component={About} />
         </div>
         <Footer />
       </div>
